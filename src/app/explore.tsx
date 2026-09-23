@@ -25,8 +25,8 @@ const CATEGORIES = [
 type SortKey = "num-asc" | "num-desc" | "title-asc";
 
 export default function HymnsScreen() {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const { category: initialCategory } = useLocalSearchParams<{ category?: string }>();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(initialCategory ?? "All");

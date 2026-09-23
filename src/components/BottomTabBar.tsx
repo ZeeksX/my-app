@@ -23,8 +23,8 @@ const TABS: TabItem[] = [
 ];
 
 export function BottomTabBar() {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const pathname = usePathname();
   const insets = useSafeAreaInsets();
   const { favorites } = useApp();

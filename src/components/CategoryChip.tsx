@@ -10,8 +10,8 @@ interface CategoryChipProps {
 }
 
 export function CategoryChip({ label, active = false, onPress }: CategoryChipProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   return (
     <Pressable

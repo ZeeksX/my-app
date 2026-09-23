@@ -11,8 +11,8 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ name, hymnCount, category }: CategoryCardProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   return (
     <Pressable

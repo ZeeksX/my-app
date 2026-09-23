@@ -20,8 +20,8 @@ import { useApp } from "@/context/AppContext";
 export function GoToHymnModal() {
   const { goToHymnOpen, closeGoToHymn } = useApp();
   const [value, setValue] = useState("");
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   const handleGo = () => {
     const num = parseInt(value, 10);

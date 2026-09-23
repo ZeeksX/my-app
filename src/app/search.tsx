@@ -16,8 +16,8 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 export default function SearchScreen() {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const { q: initialQ } = useLocalSearchParams<{ q?: string }>();
   const [query, setQuery] = useState(initialQ ?? "");
   const inputRef = useRef<TextInput>(null);

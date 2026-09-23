@@ -10,8 +10,8 @@ interface BrandMarkProps {
 }
 
 export function BrandMark({ variant = "compact", size = "md" }: BrandMarkProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const logoSize = size === "sm" ? 36 : 44;
 
   return (

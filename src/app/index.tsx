@@ -32,8 +32,8 @@ const CATEGORIES = [
 ];
 
 export default function HomeScreen() {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const [query, setQuery] = useState("");
   const { recentlyViewed, openGoToHymn } = useApp();
 
@@ -191,8 +191,8 @@ function SectionHeader({
   actionLabel?: string;
   onAction?: () => void;
 }) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   return (
     <View style={styles.sectionHeader}>
       <ThemedText style={styles.sectionTitle}>{title}</ThemedText>

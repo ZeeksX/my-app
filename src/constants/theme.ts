@@ -4,8 +4,6 @@
  * Mirrors efik-hymn-book's CSS custom properties.
  */
 
-import '@/global.css';
-
 import { Platform } from 'react-native';
 
 export const Colors = {

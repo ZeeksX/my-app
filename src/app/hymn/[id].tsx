@@ -25,8 +25,8 @@ const SIZES: { key: TextSize; px: number; lh: number }[] = [
 ];
 
 export default function HymnDetailScreen() {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const { id } = useLocalSearchParams<{ id: string }>();
   const { isFavorite, toggleFavorite, addRecentlyViewed, textSize, setTextSize } = useApp();
 

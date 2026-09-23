@@ -19,8 +19,8 @@ export function HymnList({
   emptyTitle = "No hymns found",
   emptyDescription = "Try a different search term.",
 }: HymnListProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   if (hymns.length === 0) {
     return (

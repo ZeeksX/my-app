@@ -12,8 +12,8 @@ interface HymnNumberProps {
 }
 
 export function HymnNumber({ number, size = "md" }: HymnNumberProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   const formatted = String(number).padStart(3, "0");
 

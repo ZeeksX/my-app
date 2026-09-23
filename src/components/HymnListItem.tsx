@@ -14,8 +14,8 @@ interface HymnListItemProps {
 }
 
 export function HymnListItem({ hymn, matchedSnippet }: HymnListItemProps) {
-  const scheme = useColorScheme() ?? "light";
-  const colors = Colors[scheme];
+  const scheme = useColorScheme();
+  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const { isFavorite, toggleFavorite } = useApp();
   const favorited = isFavorite(hymn.id);
   const firstLine = hymn.verses[0]?.lines[0] ?? hymn.category;
