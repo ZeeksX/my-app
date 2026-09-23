@@ -1,5 +1,5 @@
 import { router } from "expo-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
   Pressable,
   SafeAreaView,
@@ -9,7 +9,6 @@ import {
   useColorScheme,
   View,
 } from "react-native";
-import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 
 import { BrandMark } from "@/components/BrandMark";

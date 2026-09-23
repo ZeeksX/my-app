@@ -1,6 +1,6 @@
 import React from "react";
-import { Pressable, StyleSheet, useColorScheme, View } from "react-native";
-import { Colors, Spacing } from "@/constants/theme";
+import { Pressable, StyleSheet, useColorScheme } from "react-native";
+import { Colors } from "@/constants/theme";
 import { ThemedText } from "./themed-text";
 
 interface CategoryChipProps {

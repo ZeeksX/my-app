@@ -1,7 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { useColorScheme } from "react-native";
-import { Colors, Spacing } from "@/constants/theme";
+import { Spacing } from "@/constants/theme";
 import { ThemedText } from "./themed-text";
 
 interface BrandMarkProps {
@@ -10,8 +9,6 @@ interface BrandMarkProps {
 }
 
 export function BrandMark({ variant = "compact", size = "md" }: BrandMarkProps) {
-  const scheme = useColorScheme();
-  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const logoSize = size === "sm" ? 36 : 44;
 
   return (

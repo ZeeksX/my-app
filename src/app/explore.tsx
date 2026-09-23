@@ -1,6 +1,5 @@
 import { ThemedText } from "@/components/themed-text";
 import { CategoryChip } from "@/components/CategoryChip";
-import { HymnList } from "@/components/HymnList";
 import { Colors, Spacing } from "@/constants/theme";
 import { HYMNS } from "@/data/hymns";
 import { router, useLocalSearchParams } from "expo-router";
